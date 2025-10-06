@@ -1,12 +1,13 @@
 import { AppBar, Toolbar, Typography, Button, Box, Grid, Container, InputBase, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import heroImage from "../images/newbg.png";
-import logo from "../images/logo.png";
+import logo from "../images/log1.png";
 import img1 from "../images/logo1.png";
 import img2 from "../images/logo2.png";
 import img3 from "../images/logo3.png";
 import img4 from "../images/logo4.png";
 import img5 from "../images/logo5.png";
+import worldImage from "../images/world.png"
 
 const clientImages = [img1, img2, img3, img4, img5];
 const clientNames = ["TATA", "JIO", "MAHINDRA", "TCS", "SOFTKNOW"];
@@ -19,78 +20,179 @@ const MainPage = () => {
         backgroundPosition: "center",
         minHeight: "100vh",
         color: "black",
-       pb:-10,
-       pl:2,
-       pr:5
+   
       
       }}
     >
       {/* Navbar */}
-      <AppBar position="static" sx={{ background: "transparent", boxShadow: "none", color: "black" }}>
-        <Toolbar sx={{ justifyContent: "space-between", px: 5, mt: 2 }}>
-          
-          {/* Logo + Company Name */}
-          <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <Box sx={{ display: "flex", alignItems: "center",gap:1}}>
+     <AppBar
+      position="static"
+  sx={{
+    backgroundColor: "transparent",
+    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+    backdropFilter: "blur(8px)",
+    width: "100%",   // full width
+    py: 1.5,
+      }}
+    >
+      <Toolbar sx={{ flexDirection: "column", px: 2 }}>
+        {/* ---------- First Row: Logo + Company Name ---------- */}
+        <Grid container justifyContent="center" alignItems="center">
+          <Grid item>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <Box
                 component="img"
                 src={logo}
                 alt="Company Logo"
-                sx={{ height: 60, width: 60, cursor: "pointer" }}
+                sx={{
+                  height: 70,
+                  width: 90,
+                  cursor: "pointer",
+                  filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.2))",
+                }}
               />
-              <Box sx={{mt:4}}>
-<Typography variant="h5" sx={{ fontWeight: "bold" }}>SRI ESWAR<br/><span sx={{fontSize:"12px"}}>
-                <Typography variant="subtitle2" sx={{fontSize:"10px",fontWeight:"bold",ml:1}}>LOGISTICD PVT LTD.</Typography> 
-                </span></Typography>
+
+         <Box sx={{ display: "flex", alignItems: "center",mt:2}}>
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: "bold", color: "#1c61ad", }}
+      >
+        SRI
+      </Typography>
+      <Box
+        component="img"
+        src={worldImage}
+        alt="world"
+        sx={{ height: 18, width: 28}} // adjust size as needed
+      />
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: "bold", color: "#1c61ad",}}
+      >
+        ESHWAR
+      </Typography>
+    </Box>
+                <Typography
+                  variant="subtitle2"
+                  sx={{
+                    fontSize: "11px",
+                    fontWeight: "bold",
+                    color: "#444",
+                    letterSpacing: 0.5,
+                    mt: 2,
+                  }}
+                >
+                  LOGISTICS PVT LTD.
+                </Typography>
               </Box>
-              
-            </Box>
-            {/* <Typography variant="subtitle2" sx={{ fontWeight: "bold", mt: 0.5 }}>
-              LOGISTICD PVT LTD.
-            </Typography> */}
-          </Box>
+            
+          </Grid>
+        </Grid>
 
-          {/* Navigation + Search + Contact */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3,mt:2 ,mr:5,p:2}}>
-            {["Home", "Services", "Enquiry", "Careers", "About Us", "More"].map((item, index) => (
-              <Typography key={index} variant="body1" sx={{ cursor: "pointer", fontWeight: "bold" }}>
-                {item}
-              </Typography>
-            ))}
-
-            {/* Contact + Search */}
-            <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
-              <Button
-                variant="contained"
+        {/* ---------- Second Row: Navigation + Contact + Search ---------- */}
+     
+         
+    
+        <Grid
+          container
+          justifyContent="space-between"
+          alignItems="center"
+          sx={{  gap: 5,mt:1 }}
+        >
+          {/* <Grid item mr={5}
+          justifyItems="start" >
+ <Box
+                component="img"
+                src={logo}
+                alt="Company Logo"
                 sx={{
-                  backgroundColor: "#A3552A",
-                  "&:hover": { backgroundColor: "#8B451A" },
+           
+                  height: 70,
+                  width: 90,
+                  cursor: "pointer",
+                  filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.2))",
                 }}
-              >
-                Contact Us
-              </Button>
+              />
+          </Grid>
+           */}
 
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  border: "1px solid #ccc",
-                  borderRadius: 2,
-                  px: 1,
-                  py: 0.3,
-                  ml: 1,
-                }}
-              >
-                <InputBase placeholder="Search..." sx={{ ml: 1 }} />
-                <IconButton type="submit" sx={{ p: 0.5 }}>
-                  <SearchIcon />
-                </IconButton>
-              </Box>
+          {/* Navigation Links */}
+          {["Home", "Services", "Enquiry", "Careers", "About Us", "More"].map(
+            (item, index) => (
+              <Grid item key={index}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color:"#A3552A" ,
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                    fontSize: "15px",
+                    position: "relative",
+                    "&:hover": { color: "black" },
+                    "&::after": {
+                      content: '""',
+                      position: "absolute",
+                      width: "0%",
+                      height: "2px",
+                      bottom: -3,
+                      left: 0,
+                      backgroundColor: "#A3552A",
+                      transition: "width 0.3s",
+                    },
+                    "&:hover::after": { width: "100%" },
+                  }}
+                >
+                  {item}
+                </Typography>
+              </Grid>
+            )
+          )}
+
+          {/* Contact Button */}
+          <Grid item sx={{ml:5}}>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#A3552A",
+                fontWeight: "bold",
+                px: 2.5,
+                "&:hover": { backgroundColor: "#8B451A" },
+                boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+              }}
+            >
+              Contact Us
+            </Button>
+          </Grid>
+
+          {/* Search Box */}
+          <Grid item sx={{ml:3}}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                border: "1px solid #ccc",
+                borderRadius: "5px",
+                px: 1.5,
+                py: 0.3,
+                transition: "all 0.3s",
+                "&:hover": {
+                  borderColor: "#00c4cc",
+                  boxShadow: "0 0 8px rgba(0,196,204,0.3)",
+                },
+              }}
+            >
+              <InputBase
+                placeholder="Search..."
+                sx={{ ml: 1, fontSize: "14px", width: "190px" }}
+              />
+              <IconButton type="submit" sx={{ p: 0.5 }}>
+                <SearchIcon />
+              </IconButton>
             </Box>
-          </Box>
-        </Toolbar>
-      </AppBar>
-
+          </Grid>
+        </Grid>
+      </Toolbar>
+    </AppBar>
       {/* Hero Section */}
       <Container
         sx={{
