@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/LOGISTICS/static/css/main.e6c13ad2.css",
-    "main.js": "/LOGISTICS/static/js/main.92bbfed4.js",
+    "main.js": "/LOGISTICS/static/js/main.80391a96.js",
     "static/js/453.9d34802f.chunk.js": "/LOGISTICS/static/js/453.9d34802f.chunk.js",
     "static/media/newbg.png": "/LOGISTICS/static/media/newbg.5a20fbaf17e16f8b0044.png",
-    "static/media/logo.png": "/LOGISTICS/static/media/logo.948225242fe7972dfa44.png",
+    "static/media/log1.png": "/LOGISTICS/static/media/log1.f20680c84a8e5f00c26d.png",
+    "static/media/world.png": "/LOGISTICS/static/media/world.56038a4cd2106c22dab7.png",
     "static/media/logo5.png": "/LOGISTICS/static/media/logo5.4fc53da96d952a06e2b4.png",
     "static/media/logo1.png": "/LOGISTICS/static/media/logo1.a82c0df9f96b8b190d43.png",
     "static/media/logo4.png": "/LOGISTICS/static/media/logo4.f97e249039400697ad40.png",
@@ -12,11 +13,11 @@
     "static/media/logo3.png": "/LOGISTICS/static/media/logo3.7b24508af10e20363e9c.png",
     "index.html": "/LOGISTICS/index.html",
     "main.e6c13ad2.css.map": "/LOGISTICS/static/css/main.e6c13ad2.css.map",
-    "main.92bbfed4.js.map": "/LOGISTICS/static/js/main.92bbfed4.js.map",
+    "main.80391a96.js.map": "/LOGISTICS/static/js/main.80391a96.js.map",
     "453.9d34802f.chunk.js.map": "/LOGISTICS/static/js/453.9d34802f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.92bbfed4.js"
+    "static/js/main.80391a96.js"
   ]
 }
