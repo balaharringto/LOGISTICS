@@ -1,6 +1,8 @@
-import { AppBar, Toolbar, Typography, Button, Box, Grid, Container, InputBase, IconButton } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Box,Avatar, Container, InputBase, IconButton } from "@mui/material";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+
 import SearchIcon from "@mui/icons-material/Search";
-import heroImage from "../images/newbg.png";
+import heroImage from "../images/bg5.png";
 import logo from "../images/log1.png";
 import img1 from "../images/logo1.png";
 import img2 from "../images/logo2.png";
@@ -20,6 +22,9 @@ const MainPage = () => {
         backgroundPosition: "center",
         minHeight: "100vh",
         color: "black",
+
+      
+        
    
       
       }}
@@ -35,169 +40,164 @@ const MainPage = () => {
     py: 1.5,
       }}
     >
-      <Toolbar sx={{ flexDirection: "column", px: 2 }}>
-        {/* ---------- First Row: Logo + Company Name ---------- */}
-        <Grid container justifyContent="center" alignItems="center">
-          <Grid item>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+    <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+        {/* ----------- LEFT: Logo & Company Name ----------- */}
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            component="img"
+            src={logo}
+            alt="Company Logo"
+            sx={{
+              height: 70,
+              width: "auto",
+              objectFit: "contain",
+              cursor: "pointer",
+              
+              filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.2))",
+            }}
+          />
+          <Box sx={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
+            <Box sx={{ display: "flex", alignItems: "center",mt:1}}>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", color: "#1c61ad" }}
+              >
+                SRI
+              </Typography>
               <Box
                 component="img"
-                src={logo}
-                alt="Company Logo"
-                sx={{
-                  height: 70,
-                  width: 90,
-                  cursor: "pointer",
-                  filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.2))",
-                }}
+                src={worldImage}
+                alt="World"
+                sx={{ height: 16, width: 24}}
               />
-
-         <Box sx={{ display: "flex", alignItems: "center",mt:2}}>
-      <Typography
-        variant="h5"
-        sx={{ fontWeight: "bold", color: "#1c61ad", }}
-      >
-        SRI
-      </Typography>
-      <Box
-        component="img"
-        src={worldImage}
-        alt="world"
-        sx={{ height: 18, width: 28}} // adjust size as needed
-      />
-      <Typography
-        variant="h5"
-        sx={{ fontWeight: "bold", color: "#1c61ad",}}
-      >
-        ESHWAR
-      </Typography>
-    </Box>
-                <Typography
-                  variant="subtitle2"
-                  sx={{
-                    fontSize: "11px",
-                    fontWeight: "bold",
-                    color: "#444",
-                    letterSpacing: 0.5,
-                    mt: 2,
-                  }}
-                >
-                  LOGISTICS PVT LTD.
-                </Typography>
-              </Box>
-            
-          </Grid>
-        </Grid>
-
-        {/* ---------- Second Row: Navigation + Contact + Search ---------- */}
-     
-         
-    
-        <Grid
-          container
-          justifyContent="space-between"
-          alignItems="center"
-          sx={{  gap: 5,mt:1 }}
-        >
-          {/* <Grid item mr={5}
-          justifyItems="start" >
- <Box
-                component="img"
-                src={logo}
-                alt="Company Logo"
-                sx={{
-           
-                  height: 70,
-                  width: 90,
-                  cursor: "pointer",
-                  filter: "drop-shadow(2px 2px 4px rgba(0,0,0,0.2))",
-                }}
-              />
-          </Grid>
-           */}
-
-          {/* Navigation Links */}
-          {["Home", "Services", "Enquiry", "Careers", "About Us", "More"].map(
-            (item, index) => (
-              <Grid item key={index}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color:"#A3552A" ,
-                    cursor: "pointer",
-                    fontWeight: "bold",
-                    fontSize: "15px",
-                    position: "relative",
-                    "&:hover": { color: "black" },
-                    "&::after": {
-                      content: '""',
-                      position: "absolute",
-                      width: "0%",
-                      height: "2px",
-                      bottom: -3,
-                      left: 0,
-                      backgroundColor: "#A3552A",
-                      transition: "width 0.3s",
-                    },
-                    "&:hover::after": { width: "100%" },
-                  }}
-                >
-                  {item}
-                </Typography>
-              </Grid>
-            )
-          )}
-
-          {/* Contact Button */}
-          <Grid item sx={{ml:5}}>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#A3552A",
-                fontWeight: "bold",
-                px: 2.5,
-                "&:hover": { backgroundColor: "#8B451A" },
-                boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-              }}
-            >
-              Contact Us
-            </Button>
-          </Grid>
-
-          {/* Search Box */}
-          <Grid item sx={{ml:3}}>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                border: "1px solid #ccc",
-                borderRadius: "5px",
-                px: 1.5,
-                py: 0.3,
-                transition: "all 0.3s",
-                "&:hover": {
-                  borderColor: "#00c4cc",
-                  boxShadow: "0 0 8px rgba(0,196,204,0.3)",
-                },
-              }}
-            >
-              <InputBase
-                placeholder="Search..."
-                sx={{ ml: 1, fontSize: "14px", width: "190px" }}
-              />
-              <IconButton type="submit" sx={{ p: 0.5 }}>
-                <SearchIcon />
-              </IconButton>
+              <Typography
+                variant="h5"
+                sx={{ fontWeight: "bold", color: "#1c61ad" }}
+              >
+                ESHWAR
+              </Typography>
             </Box>
-          </Grid>
-        </Grid>
+            <Typography
+              variant="subtitle2"
+              sx={{
+                fontSize: "12px",
+                fontWeight: "bold",
+                 color: "#1c61ad",
+                letterSpacing: 0.5,
+                
+              }}
+            >
+              LOGISTICS PTE LTD.
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* ----------- CENTER: Navigation Links ----------- */}
+    <Box sx={{ display: "flex", gap: 4 }}>
+  {["HOME", "ENQUERY", "SERVICE US", "CAREERS", "MORE"].map((item, index) => (
+    <Typography
+      key={index}
+      variant="body1"
+      sx={{
+        color: index === 0 ? "#1976D2" : "#000", // First item blue, others black
+        cursor: "pointer",
+        fontWeight: "bold",
+        fontSize: "14px",
+        position: "relative",
+        transition: "all 0.3s ease",
+        "&:hover": { color: "#1976D2" },
+        "&::after": {
+          content: '""',
+          position: "absolute",
+          width: "0%",
+          height: "2px",
+          bottom: -3,
+          left: 0,
+          backgroundColor: "#1976D2",
+          transition: "width 0.3s",
+        },
+        "&:hover::after": { width: "100%" },
+      }}
+    >
+      {item}
+    </Typography>
+  ))}
+</Box>
+        {/* ----------- RIGHT: Order Button + Icons ----------- */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#A3552A",
+              fontWeight: "bold",
+              px: 3,
+              py: 1,
+              fontSize: "14px",
+              borderRadius: "8px",
+              "&:hover": { backgroundColor: "#8B451A" },
+              boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+            }}
+          >
+            ORDER'S
+          </Button>
+         <Box
+  sx={{
+    px:4,
+    display: "flex",
+    alignItems: "center",
+    border: "1px solid black",
+    borderRadius: "25px",
+    padding: "4px 10px",
+    width: "220px",
+    transition: "all 0.3s ease",
+    "&:hover": {
+      boxShadow: "0 0 5px rgba(0,0,0,0.2)",
+    },
+  }}
+>
+  <InputBase
+    placeholder="Search..."
+    sx={{
+      ml: 1,
+      flex: 1,
+      fontSize: "14px",
+    }}
+  />
+  <IconButton
+    type="submit"
+    sx={{
+      padding: "6px",
+    }}
+  >
+    <SearchIcon sx={{ color: "black", fontSize: 18}} />
+  </IconButton>
+</Box>
+
+
+          <IconButton>
+            <NotificationsNoneIcon sx={{ color: "#000", fontSize: 24 }} />
+          </IconButton>
+
+
+
+          <Avatar
+            alt="Profile"
+            src="/profile.jpg" // replace with your profile image path
+            sx={{
+              width: 38,
+              height: 38,
+              cursor: "pointer",
+              border: "2px solid #A3552A",
+            }}
+          />
+        </Box>
       </Toolbar>
     </AppBar>
       {/* Hero Section */}
       <Container
         sx={{
-          mt: 10,
-          mb: 8,
+        
+          mb: 16,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
@@ -210,8 +210,18 @@ const MainPage = () => {
           <Typography variant="h3" sx={{ fontWeight: "bold", lineHeight: 1.2, mb: 2 }}>
            DELIVERING TRUST ON TIME <span style={{ color: "#A3552A" }}>Fast and Easily</span>
           </Typography>
-          <Typography variant="body1" sx={{ color: "black", mb: 4 }}>
-Your business success starts with our on-time delivery          </Typography>
+         <Typography
+  variant="body1"
+  sx={{
+    color: "black",
+    mb: 4,
+    fontFamily: "'Segoe UI', 'Roboto', sans-serif", // you can replace with your preferred font
+    fontWeight: 600, // semi-bold
+  }}
+>
+  Your business success starts with our on-time delivery
+</Typography>
+
           <Button
             variant="contained"
             sx={{
@@ -240,6 +250,7 @@ Your business success starts with our on-time delivery          </Typography>
             alignItems: "center",
             marginRight: "80px",
             marginTop: "20px",
+            pb:10
           }}
         ></Box>
       </Container>
