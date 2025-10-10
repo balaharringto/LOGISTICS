@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography, Button, Box,Avatar, Container, InputBase, IconButton } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button,Link, Box,Avatar, Container, InputBase, IconButton } from "@mui/material";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -93,13 +93,22 @@ const MainPage = () => {
         </Box>
 
         {/* ----------- CENTER: Navigation Links ----------- */}
-    <Box sx={{ display: "flex", gap: 4 }}>
-  {["HOME", "ENQUERY", "SERVICE US", "CAREERS", "MORE"].map((item, index) => (
+ <Box sx={{ display: "flex", gap: 4 }}>
+  {[
+    { name: "HOME", path: "/" },
+    { name: "SERVICE US", path: "/service" },
+    { name: "ABOUT", path: "/about" },
+    { name: "CAREERS", path: "/careers" },  // Example
+    { name: "MORE", path: "/Enquery" }        // Example
+  ].map((item, index) => (
     <Typography
       key={index}
+      component={Link}
+      to={item.path}
       variant="body1"
       sx={{
-        color: index === 0 ? "#1976D2" : "#000", // First item blue, others black
+        textDecoration: "none",
+        color: index === 0 ? "#1976D2" : "#000",
         cursor: "pointer",
         fontWeight: "bold",
         fontSize: "14px",
@@ -119,7 +128,7 @@ const MainPage = () => {
         "&:hover::after": { width: "100%" },
       }}
     >
-      {item}
+      {item.name}
     </Typography>
   ))}
 </Box>
@@ -193,6 +202,7 @@ const MainPage = () => {
         </Box>
       </Toolbar>
     </AppBar>
+    
       {/* Hero Section */}
       <Container
         sx={{
