@@ -1,23 +1,30 @@
 {
   "files": {
     "main.css": "/LOGISTICS/static/css/main.e6c13ad2.css",
-    "main.js": "/LOGISTICS/static/js/main.11e6afa5.js",
+    "main.js": "/LOGISTICS/static/js/main.b6d6e7c1.js",
     "static/js/453.9d34802f.chunk.js": "/LOGISTICS/static/js/453.9d34802f.chunk.js",
     "static/media/bg5.png": "/LOGISTICS/static/media/bg5.f70b945b09e4cb62e074.png",
+    "static/media/icon2.png": "/LOGISTICS/static/media/icon2.ffe694401b75d753dd40.png",
+    "static/media/drive2.png": "/LOGISTICS/static/media/drive2.91580e26824cf9324f76.png",
     "static/media/log1.png": "/LOGISTICS/static/media/log1.f20680c84a8e5f00c26d.png",
+    "static/media/drive3.png": "/LOGISTICS/static/media/drive3.cbdc9ce7d4a51413a01d.png",
     "static/media/world.png": "/LOGISTICS/static/media/world.56038a4cd2106c22dab7.png",
+    "static/media/drive1.png": "/LOGISTICS/static/media/drive1.cf42f6f57f14250c6bd2.png",
+    "static/media/icon1.png": "/LOGISTICS/static/media/icon1.16181caa17b3d34e3826.png",
+    "static/media/icon3.png": "/LOGISTICS/static/media/icon3.11e7b4be828c3035944e.png",
     "static/media/logo5.png": "/LOGISTICS/static/media/logo5.4fc53da96d952a06e2b4.png",
     "static/media/logo1.png": "/LOGISTICS/static/media/logo1.a82c0df9f96b8b190d43.png",
     "static/media/logo4.png": "/LOGISTICS/static/media/logo4.f97e249039400697ad40.png",
     "static/media/logo2.png": "/LOGISTICS/static/media/logo2.a7cc284013de046bb16d.png",
     "static/media/logo3.png": "/LOGISTICS/static/media/logo3.7b24508af10e20363e9c.png",
+    "static/media/location.png": "/LOGISTICS/static/media/location.d20f75124f49d2c99f3c.png",
     "index.html": "/LOGISTICS/index.html",
     "main.e6c13ad2.css.map": "/LOGISTICS/static/css/main.e6c13ad2.css.map",
-    "main.11e6afa5.js.map": "/LOGISTICS/static/js/main.11e6afa5.js.map",
+    "main.b6d6e7c1.js.map": "/LOGISTICS/static/js/main.b6d6e7c1.js.map",
     "453.9d34802f.chunk.js.map": "/LOGISTICS/static/js/453.9d34802f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.11e6afa5.js"
+    "static/js/main.b6d6e7c1.js"
   ]
 }
