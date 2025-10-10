@@ -349,3 +349,70 @@ navabr
         </Box>
       </Toolbar>
     </AppBar>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <Box 
+    sx={{ 
+      display: "flex", 
+      alignItems: "center", 
+      px: "5%", // 5% left and right padding (total 10%)
+      my: 3 
+    }}
+  >
+    {/* Content Paper: 65% width */}
+    <Paper 
+      elevation={3} 
+      sx={{ 
+        width: "65%", 
+        p: 4, 
+        display: "flex", 
+        alignItems: "center", 
+        boxSizing: "border-box" 
+      }}
+    >
+      <Box component="img" src={img1} sx={{ width: 100, mr: 3 }} alt="Fast" />
+      <Box>
+        <Typography variant="h6" sx={{ fontWeight: "bold", mb: 1 }}>
+          Fast Order Processing
+        </Typography>
+        <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+          We make sure every order is handled quickly and efficiently, so you don't have to wait long. Your time matters to us.
+        </Typography>
+        <Button variant="outlined">Order Now</Button>
+      </Box>
+    </Paper>
+    {/* Icon and Description: 25% width */}
+    <Box 
+      sx={{ 
+        width: "25%", 
+        display: "flex", 
+        flexDirection: "column", 
+        alignItems: "center",
+        justifyContent: "center",
+        ml: 3 // space between Paper and Icon box
+      }}
+    >
+      <MoveToInboxIcon sx={{ fontSize: 48, color: "#222" }} />
+      <Typography sx={{ fontWeight: "bold", color: "#58c4ed", mt: 2 }}>
+        TAKE 5 MINUTES
+      </Typography>
+      <Typography variant="body2">To Place Your Order</Typography>
+    </Box>
+  </Box>
